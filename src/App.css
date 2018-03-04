@@ -26,3 +26,63 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.setbg{
+  background-image: url('https://3.bp.blogspot.com/-tJU0LDSKMIE/UtlWV9EwhBI/AAAAAAAAF3Y/WTNhbcVjZeI/s1600/orange-web-background.jpg');
+  background-size: cover;
+}
+.divpad{
+  margin-top: 50px;
+}
+.headerdiv{
+  background-color: #E91E63;
+}
+.font_header{
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  font-style: italic;
+  color:#fff;
+}
+.divpadmore{
+  padding-left:60px;
+  margin-top: 60px;
+}
+.transform{
+  transform: translateX(-100%);
+}
+.imgContent{
+  width:"60%";
+  height:"60%";
+  border-radius:50%;
+  padding:30px;
+}
+.textjustify{
+  text-align: justify;
+}
+:root {
+    --space: 1.5em 0;
+    --space: 2em 0;
+}
+
+.Site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Site-content {
+    flex: 1 0 auto;
+    padding: var(--space) var(--space) 0;
+    width: 100%;
+}
+
+.Site-content:after {
+    content: '\00a0';
+    display: block;
+    margin-top: var(--space);
+    height: 0;
+    visibility: hidden;
+}
+a.active { color: #f00 }
+.center-row{
+      margin-top:100px;
+}
