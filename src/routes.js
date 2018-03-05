@@ -8,8 +8,8 @@ import Projects from './Projects';
 export default (
 	<Switch>
     <Route exact path='/' component={ Home }/>
-		<Route path='/home' component={ Home }/>
-    <Route exact path='/projects' component={ Projects }/>
-    <Route exact path='/contact' component={ Contact }/>
+		<Route path='/Portfolio/home' component={ Home }/>
+    <Route exact path='/Portfolio/projects' component={ Projects }/>
+    <Route exact path='/Portfolio/contact' component={ Contact }/>
 	</Switch>
 )

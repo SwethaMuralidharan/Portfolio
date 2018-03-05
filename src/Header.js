@@ -18,9 +18,9 @@ class Header extends Component{
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                  <a className="nav-item nav-link active" href="home"><h2 className="font_header">Home</h2> <span className="sr-only">(current)</span></a>
-                  <a className="nav-item nav-link font_header" href="projects"><h2 className="font_header">Projects</h2></a>
-                  <a className="nav-item nav-link font_header" href="contact"><h2 className="font_header">Contact</h2></a>
+                  <a className="nav-item nav-link active" href="home/"><h2 className="font_header">Home</h2> <span className="sr-only">(current)</span></a>
+                  <a className="nav-item nav-link font_header" href="projects/"><h2 className="font_header">Projects</h2></a>
+                  <a className="nav-item nav-link font_header" href="contact/"><h2 className="font_header">Contact</h2></a>
                 </div>
               </div>
             </nav>
