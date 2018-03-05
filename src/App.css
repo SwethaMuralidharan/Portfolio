@@ -86,3 +86,21 @@ a.active { color: #f00 }
 .center-row{
       margin-top:100px;
 }
+
+#user-box {
+  display: inline-block;
+  width: 40%;
+  margin: 20px;
+  background-color: pink;
+  padding-top: 15px;
+}
+.user-pic {
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
+
+}
+#user-info {
+  font-size: 14px;
+  text-align: center;
+}
