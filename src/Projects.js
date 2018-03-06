@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
 import Profile from './Profile';
-import Foogle from './Foogle_1.png';
-import Travagram from './/Travagram_1.png';
-
-
 
 class Projects extends Component{
   constructor(){
@@ -13,57 +7,70 @@ class Projects extends Component{
     this.state={
         Projects:[{
                     name : "Foogle",
-                    description: "Users can add and search through a database of restaurants that are reviewed by culinary professionals in this Foogle Site powered by honesty and trust. Users can also post their reviews for each restaurant.",
+                    description: "Users can add and search through a list of restaurants and also add reviews.",
                     project_url : "https://github.com/SwethaMuralidharan/Foogle",
-                    image_url:"Foogle_1.png"
+                    image_url:"Foogle_1.png",
+                    heroku_link : "https://fast-anchorage-49388.herokuapp.com/",
+                    tech:"Node.js"
                    },
                    {
                     name:"Travagram",
-                    description:"This Project was implemented in Ruby On Rails. It is a  site for users to view various reviews about cities people have visitied.",
+                    description:"Site for users to view various reviews about cities people have visitied.",
                     project_url:"https://github.com/SwethaMuralidharan/Project-2---Vagabond",
-                    image_url:"Travagram_1.png"
+                    image_url:"Travagram_1.png",
+                    heroku_link : "https://secret-dawn-85607.herokuapp.com/",
+                    tech:"Ruby On Rails"
                    },
                   {
                     name : "Lovely",
-                    description:"This is a dating app which gets what it really takes to sustain a long lasting relationship: shared values.",
+                    description:"A dating app gets what it really takes to sustain a long lasting relationship: shared values.",
                     project_url:"https://github.com/SwethaMuralidharan/Love.ly-FE",
-                    image_url:"Lovely_1.png"
+                    image_url:"Lovely_1.png",
+                    heroku_link : "https://polar-harbor-73704.herokuapp.com/",
+                    tech:"MERN Stack"
                   },
                   {
                     name: "Airbnb",
-                    description:"This app lets you to search for rental homes in various places of the world and book homes at the required cost and enjoy your vacation.",
+                    description:"This app lets you to search for rental homes in various places and book homes at the desired cost.",
                     project_url:"https://github.com/SwethaMuralidharan/Airbnb-FrontEnd",
-                    image_url:"Airbnb_1.png"
+                    image_url:"Airbnb_1.png",
+                    heroku_link : "https://airbnb-fe.herokuapp.com/",
+                    tech:"MERN Stack"
                   },
                   {
                     name: "Tic Tac Toe",
                     description:"This app lets you to play tic tac toe game.",
                     project_url:"https://github.com/SwethaMuralidharan/React-Game",
-                    image_url:"tic-tac-toe.png"
-                  }
-                  ]
+                    image_url:"tic-tac-toe.png",
+                    heroku_link : "https://swetha-ttt.herokuapp.com/",
+                    tech:"React.js"
+                  }]
     }
-
   }
   render(){
-  console.log(this.state.Projects);
     return (
       <div className="container divpad">
         <div className="row">
           <Profile/>
           <div className="col-md-8">
-          {this.state.Projects.map(eachProject => {
-          return (
-                  <div id="user-box" key={eachProject._id} className="card" >
-                      <img className="card-img-top user-pic" src={require(`./${eachProject.image_url}`)} alt="Screenshot" />
-                      <div className="card-body">
-                          <h4 className="card-title">{eachProject.name}</h4>
-                          <h4 className="card-title"> <a href={eachProject.project_url}>Github Link</a></h4>
-                      </div>
-                  </div>
-        )
-      })}
-    </div>
+            <div className="height">
+                    {this.state.Projects.map(eachProject => {
+                    return (
+                            <div id="project-box" key={eachProject._id}>
+                                <img className="project-pic" src={require(`./${eachProject.image_url}`)} alt="Screenshot" />
+                                <div className="padtop">
+                                    <h4 className="card-title">{eachProject.name} - {eachProject.tech}</h4>
+                                    <h6 className="card-title">{eachProject.description}</h6>
+                                    <h4 className="card-title">
+                                      <a href={eachProject.project_url}>Source</a> &nbsp;&nbsp;&nbsp;
+                                      <a href={eachProject.heroku_link}>Demo</a>
+                                    </h4>
+                                </div>
+                            </div>
+                  )
+                  })}
+              </div>
+          </div>
         </div>
       </div>
     )
