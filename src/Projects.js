@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
+import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Projects extends Component{
   constructor(){

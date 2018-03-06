@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
+import {Link} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class Contact extends Component{
   render(){
+  console.log("rendering contact");
     return (
         <div className="container divpad">
           <div className="row">
